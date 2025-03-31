@@ -5,7 +5,7 @@ function _tide_item_nix_shell
     if test "$IN_NIX_SHELL" = impure
         set purity_icon ' '
     else
-        set purity_icon ' '
+        set purity_icon ' '
     end
 
     _tide_print_item nix_shell $tide_nix_shell_icon' ' $purity_icon $name
