@@ -63,7 +63,7 @@ function _tide_item_git
 
     # Icon for github if remote is set as github.com
     if git remote -v | grep "git@github.com" >/dev/null
-        set -g tide_git_remote_icon "  "
+        set -g tide_git_remote_icon "  "
     else if test $(git remote -v | wc -l) -eq 0
         set -g tide_git_remote_icon " 󰅛 "
     else
