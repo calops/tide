@@ -73,7 +73,7 @@ function _tide_item_git
     if set -q tide_git_icon_true
         _tide_print_item git $_tide_location_color$tide_git_remote_icon$tide_git_icon' ' (set_color white; echo -ns $location $tide_git_icon_spacer
             set_color $tide_git_color_operation; echo -ns ' '$operation ' '$step/$total_steps
-            set_color $tide_git_color_upstream; echo -ns $tide_git_icon_upstream_behind$behind tide_git_icon_upstream_ahead$ahead
+            set_color $tide_git_color_upstream; echo -ns $tide_git_icon_upstream_behind$behind $tide_git_icon_upstream_ahead$ahead
             set_color $tide_git_color_stash; echo -ns $tide_git_icon_stash$stash
             set_color $tide_git_color_conflicted; echo -ns $tide_git_icon_conflicted$conflicted
             set_color $tide_git_color_staged; echo -ns $tide_git_icon_staged$staged
