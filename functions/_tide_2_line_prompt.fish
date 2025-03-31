@@ -11,6 +11,7 @@ function _tide_2_line_prompt
     echo
 
     set -g add_prefix
+    echo -n $_tide_right_items
     _tide_side=right for item in $_tide_right_items
         _tide_item_$item
     end
