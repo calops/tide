@@ -1,7 +1,6 @@
-# FIXME: for some reason i need to disable the body instead of the call site
 function _tide_remove_unusable_items
     # Remove tool-specific items for tools the machine doesn't have installed
-    # set -l removed_items
+    set -l removed_items
     # for item in aws bun crystal direnv distrobox docker elixir gcloud git go java kubectl nix_shell node php pulumi python ruby rustc terraform toolbox zig
     #     contains $item $tide_left_prompt_items $tide_right_prompt_items || continue
     #
@@ -16,11 +15,11 @@ function _tide_remove_unusable_items
     #     end
     #     type --query $cli_names || set -a removed_items $item
     # end
-    #
-    # set -U _tide_left_items (for item in $tide_left_prompt_items
-    #     contains $item $removed_items || echo $item
-    # end)
-    # set -U _tide_right_items (for item in $tide_right_prompt_items
-    #     contains $item $removed_items || echo $item
-    # end)
+
+    set -U _tide_left_items (for item in $tide_left_prompt_items
+        contains $item $removed_items || echo $item
+    end)
+    set -U _tide_right_items (for item in $tide_right_prompt_items
+        contains $item $removed_items || echo $item
+    end)
 end
