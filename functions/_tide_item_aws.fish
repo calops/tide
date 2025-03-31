@@ -1,5 +1,4 @@
 function _tide_item_aws
-    echo TOTO1
     # AWS_PROFILE overrides AWS_DEFAULT_PROFILE, AWS_REGION overrides AWS_DEFAULT_REGION
     set -q AWS_PROFILE && set -l AWS_DEFAULT_PROFILE $AWS_PROFILE
     set -q AWS_REGION && set -l AWS_DEFAULT_REGION $AWS_REGION
