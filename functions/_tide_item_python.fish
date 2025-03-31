@@ -1,4 +1,5 @@
 function _tide_item_python
+    type -q python || type -q python3 || return
     if test -n "$VIRTUAL_ENV"
         if command -q python3
             python3 --version | string match -qr "(?<v>[\d.]+)"

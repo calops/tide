@@ -1,4 +1,5 @@
 function _tide_item_direnv
+    type -q direnv || return
     set -q DIRENV_DIR || return
     direnv status | string match -q 'Found RC allowed false' &&
         set -lx tide_direnv_color $tide_direnv_color_denied &&
