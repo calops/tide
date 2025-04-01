@@ -1,3 +1,4 @@
+tide_prompt_color_line_bg black
 tide_aws_bg_color 444444
 tide_aws_color FF9900
 tide_bun_bg_color 14151A

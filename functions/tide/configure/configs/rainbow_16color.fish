@@ -1,3 +1,4 @@
+tide_prompt_color_line_bg black
 tide_aws_bg_color yellow
 tide_aws_color brblack
 tide_bun_bg_color white
